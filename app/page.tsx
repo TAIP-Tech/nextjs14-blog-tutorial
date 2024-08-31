@@ -8,7 +8,7 @@ import Link from "next/link";
 export const revalidate = 0; // 페이지 상단에 추가
 
 async function getData() {
-  const query = `*[_type == 'blog'] | order(_createdAt asc) {
+  const query = `*[_type == 'blog'] | order(_createdAt desc) {
   title,
   smallDescription,
   "currentSlug": slug.current,
